@@ -10,7 +10,6 @@ https://projectlombok.org/
 
 - library for improving Java code
 - introduces "language level features"
-- lombok keywords are converted to native Java code
 
 ---
 
@@ -78,40 +77,8 @@ class BusinessObject {
 }
 
 // new BusinessObject.BusinessObjectBuilder()
-//                 .name("CJUG")
-//                 .build();
-```
-
----
-
-@Value
-
-```java
-@Builder(toBuilder = true)
-@Value(staticConstructor="of")
-class BusinessObject {
-
-    @Builder.Default String name = "CJUG"
-
-}
-
-// businessObject.toBuilder();
-```
-
----
-
-@Value
-
-```java
-@Builder(toBuilder = true)
-@Value(staticConstructor="of")
-class BusinessObject {
-
-    @Builder.Default String name = "CJUG"
-
-}
-
-// businessObject.toBuilder();
+//         .name("CJUG")
+//         .build();
 ```
 
 ---
@@ -121,6 +88,21 @@ class BusinessObject {
 ```java
 @Builder(toBuilder = true)
 @Value(staticConstructor="of")
+class BusinessObject {
+
+    @Builder.Default String name = "CJUG"
+
+}
+
+// BusinessObject.of("CJUG").toBuilder();
+```
+
+---
+
+@Singular
+
+```java
+@Builder(toBuilder = true)
 class BusinessObject {
 
     @Singular Set<String> speakers;
@@ -153,10 +135,10 @@ public class MyService {
 
 ---
 
-Var
+Val
 
 ```java
-public class VarExample {
+public class ValExample {
 
     public void example() {
         val example = new ArrayList<String>();
@@ -182,26 +164,10 @@ public class FieldNameConstantsExample {
 
 ---
 
-@Accessors(fluent = true)
-
-```java
-@Accessors(fluent = true)
-@Configuration
-public class AccessorsExample {
-
-    @Getter(onMethod=@__({@Bean}))
-    MyBean myBean = new MyBean();
-
-}
-```
-
----
-
 # Thank You
 
 Other favorites
-- `var`
-- `val`
+- `@Accessors(fluent = true)`
 - `@Whither`
 - `@Delegate`
 - `@ExtensionMethod`
