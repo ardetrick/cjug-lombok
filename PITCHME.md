@@ -35,16 +35,16 @@ https://projectlombok.org/
 
 # @RequiredArgsConstructor
 
-  @RequiredArgsConstructor
-  public class MyService {
+    @RequiredArgsConstructor
+    public class MyService {
 
-      private final RequiredDependency requiredDependency;
+        private final RequiredDependency requiredDependency;
 
-  //  public MyService(RequiredDependency requiredDependency) {
-  //      this.requiredDependency = requiredDependency;
-  //  }
+    //  public MyService(RequiredDependency requiredDependency) {
+    //      this.requiredDependency = requiredDependency;
+    //  }
 
-  }
+    }
 
 ---
 
