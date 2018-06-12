@@ -16,7 +16,7 @@ https://projectlombok.org/
 
 ### How to use: Gradle
 
-``` java
+```java
 dependencies {
   compileOnly 'org.projectlombok:lombok:1.18.0'
 }
@@ -37,7 +37,7 @@ dependencies {
 
 @RequiredArgsConstructor
 
-``` java
+```java
 @RequiredArgsConstructor
 public class MyService {
 
@@ -55,7 +55,7 @@ public class MyService {
 @FieldDefaults
 @NonNull
 
-``` java
+```java
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class MyService {
@@ -69,7 +69,7 @@ public class MyService {
 
 @Builder
 
-``` java
+```java
 @Builder
 class BusinessObject {
 
@@ -86,7 +86,7 @@ class BusinessObject {
 
 @Value
 
-``` java
+```java
 @Builder(toBuilder = true)
 @Value(staticConstructor="of")
 class BusinessObject {
@@ -102,7 +102,7 @@ class BusinessObject {
 
 @Value
 
-``` java
+```java
 @Builder(toBuilder = true)
 @Value(staticConstructor="of")
 class BusinessObject {
@@ -118,7 +118,7 @@ class BusinessObject {
 
 @Value (@Data)
 
-``` java
+```java
 @Builder(toBuilder = true)
 @Value(staticConstructor="of")
 class BusinessObject {
@@ -137,7 +137,7 @@ class BusinessObject {
 
 @Slf4j
 
-``` java
+```java
 @Slf4j
 public class MyService {
 
@@ -155,7 +155,7 @@ public class MyService {
 
 Var
 
-``` java
+```java
 public class VarExample {
 
     public void example() {
@@ -170,7 +170,7 @@ public class VarExample {
 
 @FieldNameConstants
 
-``` java
+```java
 @FieldNameConstants
 public class FieldNameConstantsExample {
 
@@ -184,7 +184,7 @@ public class FieldNameConstantsExample {
 
 @Accessors(fluent = true)
 
-``` java
+```java
 @Accessors(fluent = true)
 @Configuration
 public class AccessorsExample {
