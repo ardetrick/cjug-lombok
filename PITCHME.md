@@ -6,7 +6,7 @@ https://projectlombok.org/
 
 --- 
 
-# What is it?
+### What is it?
 
 - library for improving Java code
 - introduces "language level features"
@@ -14,15 +14,15 @@ https://projectlombok.org/
 
 ---
 
-# How to use: Gradle
+### How to use: Gradle
 
-  dependencies {
-    compileOnly 'org.projectlombok:lombok:1.18.0'
-  }
+    dependencies {
+      compileOnly 'org.projectlombok:lombok:1.18.0'
+    }
 
 ---
 
-# How to use: IntelliJ
+### How to use: IntelliJ
 
 - Need to install plugin
 - Then "enable annotation preprocessing" on the project
@@ -33,7 +33,7 @@ https://projectlombok.org/
 
 ---
 
-# @RequiredArgsConstructor
+@RequiredArgsConstructor
 
     @RequiredArgsConstructor
     public class MyService {
