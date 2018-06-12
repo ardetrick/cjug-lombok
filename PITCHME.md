@@ -141,7 +141,8 @@ class BusinessObject {
 @Slf4j
 public class MyService {
 
-    // private static final Logger log = org.slf4j.LoggerFactory.getLogger(MyService.class);
+    // private static final Logger log =
+    //     org.slf4j.LoggerFactory.getLogger(MyService.class);
 
     public void log() {
         log.info("Thank you CJUG!");
@@ -172,8 +173,10 @@ public class VarExample {
 ``` java
 @FieldNameConstants
 public class FieldNameConstantsExample {
+
     // public static final String FIELD_MY_FIELD = "myField";
     private final String myField;
+
 }
 ```
 
