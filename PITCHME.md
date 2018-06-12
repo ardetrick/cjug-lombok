@@ -16,163 +16,181 @@ https://projectlombok.org/
 
 ### How to use: Gradle
 
-    dependencies {
-      compileOnly 'org.projectlombok:lombok:1.18.0'
-    }
+``` java
+dependencies {
+  compileOnly 'org.projectlombok:lombok:1.18.0'
+}
+```
 
 ---
 
 ### How to use: IntelliJ
 
-- Need to install plugin
-- Then "enable annotation preprocessing" on the project
+- install plugin
+- check "enable annotation preprocessing" setting
 
 ---
 
-# Practical Examples!
+## Examples!
 
 ---
 
 @RequiredArgsConstructor
 
-    @RequiredArgsConstructor
-    public class MyService {
+``` java
+@RequiredArgsConstructor
+public class MyService {
 
-        private final RequiredDependency requiredDependency;
+    private final RequiredDependency requiredDependency;
 
-    //  public MyService(RequiredDependency requiredDependency) {
-    //      this.requiredDependency = requiredDependency;
-    //  }
+//  public MyService(RequiredDependency requiredDependency) {
+//      this.requiredDependency = requiredDependency;
+//  }
 
-    }
+}
+```
 
 ---
 
 @FieldDefaults
 @NonNull
 
-    @RequiredArgsConstructor
-    @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-    public class MyService {
+``` java
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+public class MyService {
 
-        @NonNull RequiredDependency requiredDependency;
+    @NonNull RequiredDependency requiredDependency;
 
-    }
+}
+```
 
 ---
 
 @Builder
 
-    @Builder
-    class BusinessObject {
+``` java
+@Builder
+class BusinessObject {
 
-        private final String name;
+    private final String name;
 
-    }
+}
 
-    // new BusinessObject.BusinessObjectBuilder()
-    //                 .name("CJUG")
-    //                 .build();
+// new BusinessObject.BusinessObjectBuilder()
+//                 .name("CJUG")
+//                 .build();
+```
 
 ---
 
 @Value
 
-    @Builder(toBuilder = true)
-    @Value(staticConstructor="of")
-    class BusinessObject {
+``` java
+@Builder(toBuilder = true)
+@Value(staticConstructor="of")
+class BusinessObject {
 
-        @Builder.Default String name = "CJUG"
-
-    }
-
-    // businessObject.toBuilder();
+    @Builder.Default String name = "CJUG"
 
 }
+
+// businessObject.toBuilder();
+```
 
 ---
 
 @Value
 
-    @Builder(toBuilder = true)
-    @Value(staticConstructor="of")
-    class BusinessObject {
+``` java
+@Builder(toBuilder = true)
+@Value(staticConstructor="of")
+class BusinessObject {
 
-        @Builder.Default String name = "CJUG"
-
-    }
-
-    // businessObject.toBuilder();
+    @Builder.Default String name = "CJUG"
 
 }
+
+// businessObject.toBuilder();
+```
 
 ---
 
 @Value (@Data)
 
-    @Builder(toBuilder = true)
-    @Value(staticConstructor="of")
-    class BusinessObject {
+``` java
+@Builder(toBuilder = true)
+@Value(staticConstructor="of")
+class BusinessObject {
 
-        @Singular Set<String> speakers;
-
-    }
-
-    // new BusinessObject.BusinessObjectBuilder()
-    //         .name("Alex")
-    //         .name("Freddy")
-    //         .build();
+    @Singular Set<String> speakers;
 
 }
 
+// new BusinessObject.BusinessObjectBuilder()
+//         .name("Alex")
+//         .name("Freddy")
+//         .build();
+```
+
 ---
 
-    @Slf4j
-    public class MyService {
+@Slf4j
 
-        // private static final Logger log = org.slf4j.LoggerFactory.getLogger(MyService.class);
+``` java
+@Slf4j
+public class MyService {
 
-        public void log() {
-            log.info("Thank you CJUG!");
-        }
+    // private static final Logger log = org.slf4j.LoggerFactory.getLogger(MyService.class);
 
+    public void log() {
+        log.info("Thank you CJUG!");
     }
+
+}
+```
 
 ---
 
 Var
 
-    public class VarExample {
+``` java
+public class VarExample {
 
-        public void example() {
-            val example = new ArrayList<String>();
-            example.add("Hello, World!");
-        }
-
+    public void example() {
+        val example = new ArrayList<String>();
+        example.add("Hello, World!");
     }
+
+}
+```
 
 ---
 
 @FieldNameConstants
 
-    @FieldNameConstants
-    public class FieldNameConstantsExample {
-        // public static final String FIELD_MY_FIELD = "myField";
-        private final String myField;
-    }
+``` java
+@FieldNameConstants
+public class FieldNameConstantsExample {
+    // public static final String FIELD_MY_FIELD = "myField";
+    private final String myField;
+}
+```
 
 ---
 
 @Accessors(fluent = true)
 
-    @Accessors(fluent = true)
-    @Configuration
-    public class AccessorsExample {
+``` java
+@Accessors(fluent = true)
+@Configuration
+public class AccessorsExample {
 
-        @Getter(onMethod=@__({@Bean}))
-        MyBean myBean = new MyBean();
+    @Getter(onMethod=@__({@Bean}))
+    MyBean myBean = new MyBean();
 
-    }
+}
+```
 
 ---
 
